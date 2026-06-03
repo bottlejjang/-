@@ -416,16 +416,18 @@
     <div class="form-row">
         <div class="form-section">
             <div class="question-title">리모델링 비용</div>
+            <div class="question-desc">※ 만원 단위로 입력해주세요. (예: 500 입력 시 500만원)</div>
             <div class="input-wrapper">
-                <input type="number" id="costInterior" class="styled-input" placeholder="미입력 시 0" value="0">
-                <span class="input-unit">원</span>
+                <input type="number" id="costInterior" class="styled-input" placeholder="예: 500 (500만원)" value="0">
+                <span class="input-unit">만원</span>
             </div>
         </div>
         <div class="form-section">
             <div class="question-title">가전 구입 비용</div>
+            <div class="question-desc">※ 만원 단위로 입력해주세요. (예: 500 입력 시 500만원)</div>
             <div class="input-wrapper">
-                <input type="number" id="costHomeApp" class="styled-input" placeholder="미입력 시 0" value="0">
-                <span class="input-unit">원</span>
+                <input type="number" id="costHomeApp" class="styled-input" placeholder="예: 500 (500만원)" value="0">
+                <span class="input-unit">만원</span>
             </div>
         </div>
     </div>
@@ -433,16 +435,18 @@
     <div class="form-row">
         <div class="form-section">
             <div class="question-title">가구 구입 비용</div>
+            <div class="question-desc">※ 만원 단위로 입력해주세요. (예: 500 입력 시 500만원)</div>
             <div class="input-wrapper">
-                <input type="number" id="costFurniture" class="styled-input" placeholder="미입력 시 0" value="0">
-                <span class="input-unit">원</span>
+                <input type="number" id="costFurniture" class="styled-input" placeholder="예: 500 (500만원)" value="0">
+                <span class="input-unit">만원</span>
             </div>
         </div>
         <div class="form-section">
             <div class="question-title">이사 비용</div>
+            <div class="question-desc">※ 만원 단위로 입력해주세요. (예: 500 입력 시 500만원)</div>
             <div class="input-wrapper">
-                <input type="number" id="costMoving" class="styled-input" placeholder="미입력 시 0" value="0">
-                <span class="input-unit">원</span>
+                <input type="number" id="costMoving" class="styled-input" placeholder="예: 500 (500만원)" value="0">
+                <span class="input-unit">만원</span>
             </div>
         </div>
     </div>
@@ -555,11 +559,11 @@ function calculateExpenses() {
 
     const bondDiscountRate = parsedDiscountRate / 100;
 
-    // 선택형 인프라 비용 파싱
-    const costInterior = Math.round(parseFloat(document.getElementById('costInterior').value)) || 0;
-    const costHomeApp = Math.round(parseFloat(document.getElementById('costHomeApp').value)) || 0;
-    const costFurniture = Math.round(parseFloat(document.getElementById('costFurniture').value)) || 0;
-    const costMoving = Math.round(parseFloat(document.getElementById('costMoving').value)) || 0;
+    // 선택형 인프라 비용 파싱 (만원 단위를 원 단위로 환산 처리)
+    const costInterior = (Math.round(parseFloat(document.getElementById('costInterior').value)) || 0) * 10000;
+    const costHomeApp = (Math.round(parseFloat(document.getElementById('costHomeApp').value)) || 0) * 10000;
+    const costFurniture = (Math.round(parseFloat(document.getElementById('costFurniture').value)) || 0) * 10000;
+    const costMoving = (Math.round(parseFloat(document.getElementById('costMoving').value)) || 0) * 10000;
 
     const isMetro = document.querySelector('input[name="region"]:checked').value === 'metro';
     const isRegulated = document.getElementById('isRegulated').checked;
