@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[서울시] 신혼부부 임차보증금 이자지원 사업 총정리</title>
+    <style>
+        /* 정부24 및 서울시 공공기관 서식 스타일의 네이비/블루 톤 디자인 */
+        :root {
+            --bg-color: #f4f6f9;
+            --container-bg: #ffffff;
+            --text-main: #222222;
+            --text-desc: #555555;
+            --border-color: #cccccc;
+            --point-blue: #1a365d;
+            --point-blue-light: #f0f4f8;
+            --point-blue-border: #cbd5e0;
+            --point-sky: #2b6cb0;
+            --point-sky-light: #ebf8ff;
+            --table-header: #f7fafc;
+            --accent-orange: #dd6b20;
+            --accent-red: #e53e3e;
+            --warning-bg: #fff5f5;
+            --warning-border: #fed7d7;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+
+        .notion-container {
+            max-width: 750px;
+            margin: 0 auto;
+            background-color: var(--container-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 메인 타이틀 */
+        .main-title {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--point-blue);
+            line-height: 1.4;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--point-blue);
+            padding-bottom: 15px;
+        }
+
+        /* 핵심 요약 하이라이트 박스 */
+        .summary-box {
+            background-color: var(--point-sky-light);
+            border: 1px solid #bee3f8;
+            border-left: 4px solid var(--point-sky);
+            padding: 18px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+
+        .summary-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--point-sky);
+            margin-bottom: 6px;
+        }
+
+        .summary-content {
+            font-size: 14.5px;
+            color: #2d3748;
+        }
+
+        /* 대단원 섹션 타이틀 */
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--point-blue);
+            margin: 36px 0 14px 0;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .sub-section-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--point-sky);
+            margin: 18px 0 8px 0;
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--text-main);
+            margin-bottom: 14px;
+        }
+
+        .bold-text {
+            font-weight: 700;
+            color: #1a202c;
+        }
+
+        /* 조건 체크리스트 */
+        .check-list {
+            list-style: none;
+            font-size: 14.5px;
+            color: #2d3748;
+            background-color: #f8fafc;
+            padding: 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            margin-bottom: 16px;
+        }
+
+        .check-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .check-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 2px;
+            color: var(--point-sky);
+            font-weight: bold;
+        }
+
+        /* 수식/계산식 박스 */
+        .formula-box {
+            background-color: #f7fafc;
+            border: 1px solid #cbd5e0;
+            padding: 14px;
+            font-size: 13.5px;
+            margin: 12px 0;
+            border-radius: 4px;
+        }
+
+        /* 공공 서식 테이블 */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 13.5px;
+            text-align: center;
+        }
+
+        .data-table th, .data-table td {
+            border: 1px solid var(--border-color);
+            padding: 10px 8px;
+        }
+
+        .data-table th {
+            background-color: var(--table-header);
+            font-weight: 700;
+            color: #2d3748;
+        }
+
+        .data-table td:first-child {
+            background-color: #fafafa;
+            font-weight: 600;
+        }
+
+        /* 프로세스 단계 카드 */
+        .process-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 16px 0;
+        }
+
+        .process-step {
+            border: 1px solid #e2e8f0;
+            background-color: #ffffff;
+            border-radius: 4px;
+            padding: 14px;
+        }
+
+        .step-badge {
+            display: inline-block;
+            background-color: var(--point-blue);
+            color: #fff;
+            font-size: 11.5px;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin-bottom: 6px;
+        }
+
+        .step-name {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 4px;
+        }
+
+        .step-desc {
+            font-size: 13.5px;
+            color: var(--text-desc);
+            line-height: 1.5;
+        }
+
+        /* 경고/주의사항 박스 */
+        .warning-section {
+            background-color: var(--warning-bg);
+            border: 1px solid var(--warning-border);
+            border-left: 4px solid var(--accent-red);
+            padding: 18px;
+            margin-top: 24px;
+            border-radius: 4px;
+        }
+
+        .warning-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--accent-red);
+            margin-bottom: 8px;
+        }
+
+        .warning-desc {
+            font-size: 13.5px;
+            color: #2d3748;
+            line-height: 1.6;
+        }
+
+        /* 하단 링크 버튼 */
+        .link-footer {
+            margin-top: 32px;
+            padding: 16px;
+            background-color: var(--point-blue-light);
+            border: 1px solid var(--point-blue-border);
+            text-align: center;
+            font-size: 13px;
+            border-radius: 4px;
+        }
+
+        .link-footer a {
+            color: var(--point-sky);
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .link-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="notion-container">
+    <!-- 메인 타이틀 -->
+    <h1 class="main-title">🏠 [서울시] 신혼부부 임차보증금 이자지원 사업 총정리</h1>
+
+    <!-- 💡 핵심 요약 -->
+    <div class="summary-box">
+        <div class="summary-title">💡 핵심 요약</div>
+        <div class="summary-content">
+            서울시가 직접 돈을 빌려주는 것이 아니라, <b>은행에서 받은 전세대출의 '이자'를 최대 연 4.5%까지 지원</b>해 주는 제도입니다. 최대 3억 원(보증금의 90% 이내)까지 대출 연계가 가능합니다.
+        </div>
+    </div>
+
+    <!-- 섹션 1 -->
+    <h2 class="section-title">📌 1. 신청 자격 조건</h2>
+    <p>아래 자격 요건을 모두 만족해야 서울시 이자지원 혜택을 신청할 수 있습니다.</p>
+
+    <ul class="check-list">
+        <li><span class="bold-text">부부 기준 (택 1):</span> <b>신혼부부</b>(혼인신고일 기준 7년 이내) 또는 <b>예비신혼부부</b>(대출 신청일 기준 6개월 이내 결혼 예정)</li>
+        <li><span class="bold-text">거주지 요건:</span> 서울시민 또는 대출 실행 후 1개월 이내 서울시 전입 예정자</li>
+        <li><span class="bold-text">소득 요건:</span> 부부합산 연소득 <b>1억 3천만 원 이하</b></li>
+        <li><span class="bold-text">주택 요건:</span> 세대원 전원 무주택자</li>
+        <li><span class="bold-text">대상 주택:</span> 임차보증금 <b>7억 원 이하</b>의 주택, 오피스텔, 노인복지주택</li>
+    </ul>
+
+    <p style="font-size: 14px; margin-bottom: 6px;"><span class="bold-text" style="color: var(--accent-orange);">⚠️ 반전세 / 월세 계약 시 주의사항</span></p>
+    <p style="font-size: 13.5px; color: var(--text-desc); margin-bottom: 8px;">
+        월세가 있는 계약은 단순 보증금 액수가 아니라, 서울시 전월세 전환율을 적용한 <span class="bold-text">'환산 임차보증금'</span> 총액이 7억 원 이하여야만 신청이 가능합니다.
+    </p>
+
+    <div class="formula-box">
+        <div style="font-weight: 700; margin-bottom: 4px; color: var(--point-blue);">■ 환산 임차보증금 계산 공식</div>
+        <code style="display:block; background:#fff; padding:8px; border:1px solid #e2e8f0; font-family:inherit; font-size:13px; color:#c53030; font-weight:700; text-align:center;">
+            환산 임차보증금 = 월세 보증금 + (월세 × 12개월 ÷ 전월세 전환율(5.5%))
+        </code>
+        <div style="margin-top: 8px; color: #4a5568; font-size: 12.5px; line-height: 1.5;">
+            <b>💡 예시 (보증금 6억 / 월세 50만 원인 경우):</b><br>
+            600,000,000 + (500,000 × 12 ÷ 5.5%) = <span style="color:var(--accent-red); font-weight:700;">709,090,909원</span> ➔ 7억 초과로 <b>지원 불가</b>
+        </div>
+    </div>
+
+    <!-- 섹션 2 -->
+    <h2 class="section-title">📉 2. 소득 및 자녀 수에 따른 이자지원 혜택</h2>
+    <p>산정된 최종 지원금리를 차감한 만큼만 실제 이자로 부담하게 됩니다. <span style="color: var(--accent-orange); font-weight: 600;">(단, 본인 부담 최소 금리는 연 1.0%로 고정됩니다.)</span></p>
+
+    <div class="sub-section-title">1) 부부합산 연소득별 기본 지원 금리</div>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>부부합산 연소득 구간</th>
+                <th>기본 지원 금리 (연)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>3,000만 원 이하</td>
+                <td style="font-weight: 700; color: var(--point-sky);">연 3.0%</td>
+            </tr>
+            <tr>
+                <td>3,000만 원 초과 ~ 6,000만 원 이하</td>
+                <td>연 2.5%</td>
+            </tr>
+            <tr>
+                <td>6,000만 원 초과 ~ 9,000만 원 이하</td>
+                <td>연 2.0%</td>
+            </tr>
+            <tr>
+                <td>9,000만 원 초과 ~ 1억 1,000만 원 이하</td>
+                <td>연 1.5%</td>
+            </tr>
+            <tr>
+                <td>1억 1,000만 원 초과 ~ 1억 3,000만 원 이하</td>
+                <td>연 1.0%</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="sub-section-title">2) 추가 우대 금리 (중복 불가, 가장 유리한 1개만 적용)</div>
+    <ul class="check-list" style="background-color: #fff; border-color: var(--point-blue-border);">
+        <li>👶 <b>다자녀 가구:</b> 1자녀 연 0.5% / 2자녀 연 1.0% / 3자녀 이상 연 1.5%</li>
+        <li>💍 <b>예비신혼부부:</b> 연 0.2%</li>
+        <li>👴 <b>만 65세 이상 직계존속 동거 가구:</b> 연 1.0%</li>
+    </ul>
+
+    <div class="formula-box" style="border-left: 4px solid var(--point-sky); background-color: var(--point-blue-light);">
+        <div style="font-weight: 700; margin-bottom: 4px; color: var(--point-sky);">🔍 최대 혜택 적용 시 시뮬레이션</div>
+        <p style="font-size: 13.5px; margin-bottom: 6px; color:#2d3748;">
+            <b>연소득 3천만 원 이하(기본 3.0%) + 3자녀 가구(우대 1.5%) = 총 연 4.5% 이자 지원</b>
+        </p>
+        <div style="font-size: 13px; color: var(--text-desc); line-height: 1.5;">
+            취급 은행의 전세대출 금리가 연 5.0%라고 가정할 경우, 서울시가 4.5%를 지원해 주므로 산술적으로는 0.5%이지만, <b>본인 부담 최저 기준 제한(연 1.0%)</b>에 따라 최종적으로 <b>연 1.0%</b>의 이자만 납부하게 됩니다.
+        </div>
+    </div>
+
+    <!-- 섹션 3 -->
+    <h2 class="section-title">⏳ 3. 지원 기간 및 연장 혜택 (★최신 변경사항)</h2>
+    <p>기본 대출 기간은 2년이며, 특정 요건을 충족하면 연장 계약이 가능합니다.</p>
+    <ul class="check-list">
+        <li><span class="bold-text">기본 지원 기간:</span> 기본 2년 + 조건 충족 시 2년 추가 연장 가능 <b>(최대 4년)</b></li>
+        <li><span class="bold-text">출산 및 입양 가구 혜택 대폭 확대:</span> 대출 기간 중 자녀 출산(입양) 시 <span style="color:var(--point-sky); font-weight:700;">자녀 1명당 4년씩 연장 가능 (최장 12년까지 지원 가능)</span></li>
+        <li><span class="bold-text">난임 가구 연장 혜택:</span> 난임 치료 등을 목적으로 2년 연장 허용 (연장 기간 중 출산 시 총 4년 연장 적용, 최장 10년)</li>
+    </ul>
+
+    <!-- 섹션 4 -->
+    <h2 class="section-title">📑 4. 신청 프로세스 (4단계)</h2>
+    <p style="color: var(--accent-orange); font-size: 14.5px; font-weight: 700;">⚠️ 절차가 꼬이지 않도록 반드시 '은행 사전 상담'을 최우선으로 진행하세요!</p>
+    
+    <div class="process-container">
+        <div class="process-step">
+            <span class="step-badge">1단계</span>
+            <div class="step-name">은행 사전 상담</div>
+            <div class="step-desc">협약은행(국민은행, 하나은행, 신한은행) 지점에 직접 방문하여 본인의 신용도와 소득 기준에 따른 대출 한도, 그리고 대상 주택의 대출 가능 여부를 미리 조회합니다.</div>
+        </div>
+        <div class="process-step">
+            <span class="step-badge">2단계</span>
+            <div class="step-name">임대차계약 체결</div>
+            <div class="step-desc">대출 심사가 가능한 주택 계약을 진행하고, 보증금의 5% 이상을 계약금으로 지급한 뒤 임대차계약서를 작성합니다. (주민센터 또는 온라인 확정일자 취득 필수)</div>
+        </div>
+        <div class="process-step">
+            <span class="step-badge">3단계</span>
+            <div class="step-name">서울시 대출추천서 신청 (서울주거포털)</div>
+            <div class="step-desc">잔금일(대출실행일) 기준 2개월 전부터 서울주거포털 웹사이트에 접속하여 구비 서류를 첨부한 뒤 대출추천서를 신청합니다. (서울시 심사 및 승인 후 출력 가능)</div>
+        </div>
+        <div class="process-step">
+            <span class="step-badge">4단계</span>
+            <div class="step-name">은행 대출 최종 신청</div>
+            <div class="step-desc">온라인으로 발급 및 출력한 '서울시 대출추천서'와 확정일자부 계약서 등 제반 구비서류를 지참하여 은행에 방문한 뒤 최종 대출을 신청 및 실행합니다.</div>
+        </div>
+    </div>
+
+    <!-- 예비신혼부부 주의사항 -->
+    <div class="warning-section">
+        <div class="warning-title">🚨 예비신혼부부 신청자 필수 주의사항 (FAQ)</div>
+        <div class="warning-desc">
+            예비신혼부부 자격 요건으로 승인을 받아 대출을 실행한 경우, <b>대출 실행일로부터 반드시 6개월 이내에 혼인관계증명서</b>를 발급받아 대출 취급 은행 지점에 제출해야 합니다.<br><br>
+            만약 정해진 기한 내에 혼인 증빙 자료를 제출하지 못할 경우, <span class="bold-text" style="color: var(--accent-red);">서울시 이자 지원 혜택이 즉시 중단되며 대출 잔액을 한 번에 전액 상환</span>해야 하는 불이익을 받을 수 있으므로 결혼 일정과 잔금 주기를 면밀히 계산하셔야 합니다.
+        </div>
+    </div>
+
+    <!-- 하단 풋터 및 공식 링크 -->
+    <div class="link-footer">
+        🏠 정책 기조 및 예산 소진 상황에 따라 세부 내용이 상시 변경될 수 있으므로 반드시 공식 홈페이지에서 최종 공고문을 교차 확인하세요.<br>
+        <span style="display:block; margin-top:8px; font-size:14px;">
+            🔗 <b>공식 사이트:</b> <a href="https://housing.seoul.go.kr/site/main/content/sh01_0400800#none" target="_blank">서울주거포털 신혼부부 이자지원 안내 바로가기</a>
+        </span>
+    </div>
+</div>
+
+</body>
+</html>
