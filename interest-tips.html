@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주택담보대출 이자 컨트롤하는 꿀팁</title>
+    <style>
+        /* 정부24/홈택스 스타일의 신뢰감 있는 화이트 및 네이비/블루 톤 디자인 */
+        :root {
+            --bg-color: #f4f6f9;
+            --container-bg: #ffffff;
+            --text-main: #222222;
+            --text-desc: #555555;
+            --border-color: #cccccc;
+            --point-blue: #2b6cb0;
+            --point-blue-light: #ebf8ff;
+            --point-blue-border: #bee3f8;
+            --point-green: #2f855a;
+            --point-green-light: #f0fff4;
+            --accent-orange: #dd6b20;
+            --accent-red: #e53e3e;
+            --warning-bg: #fff5f5;
+            --warning-border: #fed7d7;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+
+        .notion-container {
+            max-width: 750px;
+            margin: 0 auto;
+            background-color: var(--container-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 헤더 섹션 */
+        .main-title {
+            font-size: 24px;
+            font-weight: 800;
+            color: #1a202c;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--point-blue);
+            padding-bottom: 15px;
+        }
+
+        /* 상단 인트로 알림 박스 */
+        .intro-box {
+            background-color: #fffaf0;
+            border: 1px solid #feebc8;
+            border-left: 4px solid var(--accent-orange);
+            padding: 16px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            font-size: 14.5px;
+        }
+
+        /* 대단원 섹션 */
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a202c;
+            margin: 36px 0 14px 0;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .sub-section-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--point-blue);
+            margin: 16px 0 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--text-main);
+            margin-bottom: 14px;
+        }
+
+        .bold-text {
+            font-weight: 700;
+            color: #1a202c;
+        }
+
+        /* 리스트 스타일 */
+        .bullet-list {
+            list-style: none;
+            font-size: 14.5px;
+            color: #2d3748;
+            margin-bottom: 16px;
+        }
+
+        .bullet-list li {
+            margin-bottom: 8px;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .bullet-list li::before {
+            content: "•";
+            position: absolute;
+            left: 2px;
+            color: var(--point-blue);
+            font-weight: bold;
+        }
+
+        /* 시나리오 박스 (실제 병짱 상황 가이드라인) */
+        .scenario-box {
+            background-color: var(--point-blue-light);
+            border: 1px solid var(--point-blue-border);
+            padding: 18px;
+            margin: 14px 0;
+            border-radius: 4px;
+        }
+
+        .scenario-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--point-blue);
+            margin-bottom: 10px;
+            border-bottom: 1px dashed var(--point-blue-border);
+            padding-bottom: 4px;
+        }
+
+        .scenario-step {
+            font-size: 13.5px;
+            color: #2d3748;
+            margin-bottom: 6px;
+            padding-left: 14px;
+            position: relative;
+        }
+        .scenario-step::before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            font-size: 11px;
+            color: var(--point-blue);
+            top: 2px;
+        }
+
+        .tip-tag-box {
+            background-color: #ffffff;
+            border: 1px solid var(--point-blue-border);
+            padding: 10px 12px;
+            font-size: 13px;
+            color: #2c5282;
+            margin-top: 12px;
+            line-height: 1.5;
+        }
+
+        /* 경고/주의사항 박스 */
+        .warning-section {
+            background-color: var(--warning-bg);
+            border: 1px solid var(--warning-border);
+            border-left: 4px solid var(--accent-red);
+            padding: 20px;
+            margin-top: 32px;
+            border-radius: 4px;
+        }
+
+        .warning-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--accent-red);
+            margin-bottom: 14px;
+        }
+
+        .warning-item {
+            margin-bottom: 14px;
+        }
+        .warning-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .warning-item-title {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 4px;
+        }
+
+        .warning-item-desc {
+            font-size: 13.5px;
+            color: var(--text-desc);
+            line-height: 1.6;
+        }
+
+        /* 안내 하단 풋터 */
+        .info-card-footer {
+            font-size: 13px;
+            color: var(--text-desc);
+            background-color: #edf2f7;
+            padding: 14px;
+            line-height: 1.6;
+            margin-top: 32px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="notion-container">
+    <!-- 메인 타이틀 -->
+    <h1 class="main-title">💵 주택담보대출 이자 컨트롤하는 꿀팁</h1>
+
+    <!-- 인트로 요약 정보 -->
+    <div class="intro-box">
+        <p style="margin-bottom: 8px; font-weight: 700; color: var(--accent-orange);">⚠️ 0.1% 차이에도 매년 수 십만 원씩 납입금이 달라지는 주택담보대출!</p>
+        <p style="font-size: 14px; color: #4a5568; margin-bottom: 0;">
+            매일 오르고 내리는 주택담보대출 이자가 걱정되신다면, 아래 꿀팁들을 꼭 활용해 보세요. <br>
+            저도 이 두 가지 방법을 통해 금리가 5%까지 올랐던 상황에서도 <b>3% 후반대로 대출을 실행</b>할 수 있었습니다. 안내해 드린 주의사항도 반드시 확인하시고 성공적인 자금 조달을 완성하시길 바랍니다.
+        </p>
+    </div>
+
+    <!-- 섹션 1 -->
+    <h2 class="section-title">🔥 1. 고정금리와 변동금리 '동시 신청'하기</h2>
+    
+    <div class="sub-section-title">❓ 왜 해야 하나요?</div>
+    <p>주택담보대출 신청일과 실제 실행일(잔금일) 사이에는 보통 1~2달의 시차가 존재합니다. 이 기간 동안 금융 시장 금리가 어떻게 변동할지는 전문가조차 예측하기 어렵기 때문입니다.</p>
+
+    <!-- 시나리오 시각화 박스 -->
+    <div class="scenario-box">
+        <div class="scenario-title">📋 예상 시나리오 (실제 매칭 및 실행 사례)</div>
+        <div class="scenario-step">두 달 전, 시중은행 5년 고정금리(4.4%) 상품을 신청함.</div>
+        <div class="scenario-step">리스크 관리 차원에서 <b>‘A은행 5년 고정’</b>과 <b>‘B은행 6개월 변동’</b> 두 가지 상품을 동시에 접수함.</div>
+        <div class="scenario-step">대출 실행일을 앞두고 금융채 금리가 폭등하여 고정금리가 4.9% 이상으로 상승할 것으로 예상됨.</div>
+        <div class="scenario-step" style="font-weight: 700; color: var(--point-green);">결과: 미리 확보해 둔 B은행 6개월 변동금리(3.8%) 상품을 최종 지정하고, 고정금리는 과감히 취소.</div>
+        
+        <div class="tip-tag-box">
+            <b>💡 단독 신청 시 리스크 파악:</b> 만약 5년 고정금리 단 한 가지만 신청해 두고 기다렸다면, 실행일 기준으로 폭등해 버린 높은 이자 비용을 5년 동안 고스란히 부담해야 하는 상황이 발생했을 것입니다.
+        </div>
+    </div>
+
+    <div class="sub-section-title">🛠️ 어떻게 진행하나요?</div>
+    <p>대출 상담사 또는 지점 창구를 통해 <span class="bold-text">고정금리 상품 1개, 변동금리 상품 1개씩 총 2개의 신청서</span>를 각각 제출해 둡니다. (예: A은행 5년 고정금리 + B은행 6개월 변동금리)</p>
+    <p style="font-size: 14.5px; color: var(--text-desc);">
+        <b>🎯 마무리는 아주 간단합니다:</b> 잔금일 2주 전쯤 확정되는 최종 금리 수치를 상호 비교해 보고, 내게 더 유리한 상품 하나만 최종 선택한 뒤 나머지 대출 신청은 취소하면 끝납니다. 시스템상 당연한 권리이므로 은행의 눈치를 볼 필요가 전혀 없습니다.
+    </p>
+
+    <!-- 섹션 2 -->
+    <h2 class="section-title">💼 2. '대출상담사' 100% 활용하기</h2>
+    
+    <div class="sub-section-title">❓ 직장인의 주거래 은행 투어는 시간 낭비?</div>
+    <p>바쁜 직장인이 연차를 쓰고 주거래 은행 창구를 직접 찾아가 봤자, 담당 은행원은 자사 금융 상품 안에서만 추천을 제한합니다. 게다가 실시간으로 변동되는 은행별 최신 '특판 금리' 정보는 일반 소비자가 일일이 추적하기 어렵습니다.</p>
+
+    <div class="sub-section-title">💡 상담사 100% 활용 가이드</div>
+    <ul class="bullet-list">
+        <li><span class="bold-text">전 금융권 실시간 비교:</span> 각 금융협회에 정식 등록된 전문 대출상담사를 통하면 1금융권부터 2금융권까지 현재 시점 최저 금리와 우대 조건을 한눈에 분석할 수 있습니다.</li>
+        <li><span class="bold-text">상담 수수료 0원:</span> 대출 중개 수수료는 은행 본사에서 상담사에게 지급하므로, <span style="color: var(--accent-orange); font-weight: 600;">고객에게 별도의 수수료를 요구하는 것은 명백한 불법</span>입니다. 안심하고 비교 서비스를 요청하세요.</li>
+    </ul>
+
+    <!-- 🚨 주의사항 섹션 -->
+    <div class="warning-section">
+        <div class="warning-title">🚨 금융 거래 전 필수 확인 주의사항</div>
+        
+        <div class="warning-item">
+            <div class="warning-item-title">⚠️ 무분별한 복수 신청은 독이 될 수 있습니다</div>
+            <div class="warning-item-desc">단기간 내에 과도하게 많은 금융사로 중복 조회가 발생할 경우, 과도조회로 걸려 일시적으로 대출 한도가 차감되거나 심한 경우 심사 자체가 거절될 수 있습니다. 안전하게 2~3곳 이내의 최적 조합선에서만 복수 진행하시길 권고합니다.</div>
+        </div>
+
+        <div class="warning-item">
+            <div class="warning-item-title">⚠️ 가상금리(스트레스 금리)와 DSR 한도를 확인하세요</div>
+            <div class="warning-item-desc">대출 심사 시 DSR을 산정할 때는 미래의 금리 상승 위험을 예방하기 위한 '스트레스 가상금리'가 반영됩니다. 변동금리는 고정금리에 비해 이 가상 페널티 금리가 높게 잡히기 때문에, 표면 금리가 더 낮더라도 <span class="bold-text" style="color:var(--accent-red);">실제 빌릴 수 있는 총액(한도)은 고정금리보다 적게 나올 수 있습니다.</span> 반드시 사전에 DSR 계산을 함께 요청하세요.</div>
+        </div>
+
+        <div class="warning-item">
+            <div class="warning-item-title">⚠️ 장기주택저당차입금 이자상환 소득공제 요건 확인</div>
+            <div class="warning-item-desc">거치 기간이나 변동금리 주기 조건에 따라 연말정산 시 세부적인 이자상환 소득공제 혜택 금액이나 대상 요건 가이드에서 불리하게 작용할 수 있으니, 상품 설계 시 해당 공제 규격을 통과하는지 필히 체크해 두어야 합니다.</div>
+        </div>
+    </div>
+
+    <!-- 하단 풋터 안내 문구 -->
+    <div class="info-card-footer">
+        🏠 내 집 마련이라는 큰 꿈을 앞두고 대출 이자 때문에 스트레스받지 마세요. 작은 팁 하나로 매월 수십만 원의 고정 지출을 아낄 수 있습니다.<br>
+        <span style="font-size: 11px; color: #718096; display: block; margin-top: 4px;">※ 본 가이드는 개인의 신용도, 은행 규제 시기 및 거주 지역 조건에 따라 결과값 차이가 발생할 수 있으므로 실행 전 최종 확인이 필요합니다.</span>
+    </div>
+</div>
+
+</body>
+</html>
